@@ -1,0 +1,15 @@
+[project]
+name = "xzit-ai-api"
+version = "1.0.0"
+description = "徐州工程学院 AI 助手 API"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi==0.135.2",
+    "uvicorn==0.42.0",
+    "openai==2.30.0",
+    "python-dotenv==1.2.2",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
