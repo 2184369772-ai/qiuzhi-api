@@ -510,14 +510,20 @@ body: JSON.stringify({ question: q })
 });
 const data = await res.json();
 removeTyping();
+
+// 调试日志
+console.log('API Response:', data);
+
 if (data.error) {
 addMsg('bot', '出错了：' + data.error);
-} else {
+} else if (data.answer) {
 addMsg('bot', data.answer);
+} else {
+addMsg('bot', '响应格式错误：' + JSON.stringify(data));
 }
 } catch (e) {
 removeTyping();
-addMsg('bot', '网络错误，请重试');
+addMsg('bot', '网络错误：' + e.message);
 }
 
 sendBtn.disabled = false;
