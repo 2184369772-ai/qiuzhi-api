@@ -437,6 +437,7 @@ body {
 
 <script>
 const PASSWORD = "a123456789";
+const API_KEY = "a123456789"; // 后端鉴权用的 Key
 
 function checkPassword() {
 const input = document.getElementById('pwdInput').value;
@@ -505,7 +506,10 @@ addTyping();
 try {
 const res = await fetch('/ai_chat', {
 method: 'POST',
-headers: { 'Content-Type': 'application/json' },
+headers: { 
+'Content-Type': 'application/json',
+'X-API-Key': API_KEY
+},
 body: JSON.stringify({ question: q })
 });
 const data = await res.json();
