@@ -1598,7 +1598,8 @@ async function sendMessage() {
     }
   } catch (e) {
     hideTyping();
-    addMessage('bot', '网络错误，请检查网络连接后重试。');
+    console.error('Fetch error:', e);
+    addMessage('bot', '请求失败：' + (e.message || '未知错误'));
   }
 
   sendBtn.disabled = !userInput.value.trim();
