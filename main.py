@@ -56,7 +56,7 @@ def ai_chat(question: str, request: Request):
         response = client.chat.completions.create(
             model="qwen-plus",
             messages=[
-                {"role": "system", "content": "你是一个来自徐州工程学院的 AI 助手。"},
+                {"role": "system", "content": "你是一个来自感冒院的 AI 助手。"},
                 {"role": "user", "content": question},
             ]
         )
@@ -74,7 +74,7 @@ def ai_chat_post(req: ChatRequest, request: Request):
         response = client.chat.completions.create(
             model="qwen-plus",
             messages=[
-                {"role": "system", "content": "你是一个来自徐州工程学院的 AI 助手。"},
+                {"role": "system", "content": "你是一个来自感冒院的 AI 助手。"},
                 {"role": "user", "content": req.question},
             ]
         )
