@@ -1,0 +1,50 @@
+# Python 虚拟环境
+venv/
+.venv/
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+
+# 环境变量（本地测试用，不要上传！）
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Ideal Beat 项目文件（不应提交）
+ideal_beat/
+ideal_beat_app/
+ideal_beat_new/
+flutter/
+
+# JDK（不应提交）
+jdk-17.0.12/
+jdk17.zip
+
+# 构建输出和日志
+build_output*.txt
+*.zip
+*.uf2
+
+# 脚本工具（本地开发用）
+auto_flash.py
+check_devices.ps1
+check_ports.py
+compress_bg.py
+dfu_flash.py
+flash_nrf52.py
+flash_v2.py
+list_ports.py
+to_base64.py
+trigger_bootloader.py
+wait_ports.py
+zip_to_uf2.py
+google_usb_driver/
+
+# 临时文件
+license_out*.txt
+pubget_out*.txt
